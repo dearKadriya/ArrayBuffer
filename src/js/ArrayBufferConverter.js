@@ -4,7 +4,7 @@ export class ArrayBufferConverter {
   }
 
   toString() {
-    return String.fromCharCode.apply(null, new Uint16Array(this.buffer));
+    return String.fromCharCode.apply(... [null, new Uint16Array(this.buffer)]);
   }
 }
 
